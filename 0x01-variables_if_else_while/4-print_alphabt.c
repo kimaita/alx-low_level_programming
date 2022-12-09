@@ -7,6 +7,7 @@
 int main(void)
 {
 	char cc = 'a';
+	char nline = '\n';
 
 	while (cc <= 'z')
 		if (cc == 'q' || cc == 'e')
