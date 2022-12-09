@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 /**
  * main - Entry point
  *
@@ -6,17 +7,11 @@
  */
 int main(void)
 {
-	char cc = 'a';
+	char cc = 'z';
 	char nline = '\n';
 
-	while (cc <= 'z')
-		if (cc == 'q' || cc == 'e')
-		{
-			cc++;
-			continue;
-		}
-		else
-			putchar(cc++);
+	while (cc >= 'a')
+		putchar(cc--);
 	putchar(nline);
 	return (0);
 }
