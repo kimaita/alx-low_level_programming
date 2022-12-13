@@ -17,6 +17,6 @@ int main(void)
 		else if (i % 5 == 0)
 			sum += i;
 	}
-	putchar('\n');
+	printf("%d\n", sum);
 	return (0);
 }
