@@ -16,7 +16,7 @@ int main(void)
 	for (i = 0; i < 48; i++)
 	{
 		n = n1 + n2;
-		if (n == 47)
+		if (i == 47)
 			printf("%ld", n);
 		else
 			printf("%ld, ", n);
