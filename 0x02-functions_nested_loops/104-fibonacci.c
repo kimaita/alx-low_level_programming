@@ -13,10 +13,10 @@ int main(void)
 	n1 = 1;
 	n2 = 2;
 	printf("%.0f, %.0f, ", n1, n2);
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 96; i++)
 	{
 		n = n1 + n2;
-		if (i == 97)
+		if (i == 95)
 			printf("%.0f", n);
 		else
 			printf("%.0f, ", n);
