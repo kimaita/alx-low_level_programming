@@ -20,9 +20,11 @@ int main(void)
 			printf("%.0f", n);
 		else
 			printf("%.0f, ", n);
+
 		n1 = n2;
 		n2 = n;
 	}
+
 	putchar('\n');
 	return (0);
 }
