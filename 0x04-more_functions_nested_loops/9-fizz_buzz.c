@@ -19,7 +19,7 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%i", i);
-		if ( != 100)
+		if (i != 100)
 			putchar(' ');
 	}
 	putchar('\n');
