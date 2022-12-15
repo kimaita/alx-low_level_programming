@@ -11,8 +11,6 @@ void print_number(int n)
 	int i;
 	bool isValid = false;
 
-	n = (long) n;
-
 	if (n < 0)
 	{
 		_putchar('-');
@@ -33,6 +31,4 @@ void print_number(int n)
 			_putchar('0');
 		n = n % i;
 	}
-
-
 }
