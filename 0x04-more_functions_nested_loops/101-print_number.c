@@ -3,7 +3,7 @@
 
 /**
  *print_number - prints an integer using _putchar
- *@n: integer to be printed
+ *@num: integer to be printed
  *
  */
 void print_number(int num)
@@ -14,14 +14,14 @@ void print_number(int num)
 
 	if (num == 0)
 		_putchar('0');
-	else{
+	else
+	{
+		n = num;
 		if (num < 0)
 		{
 			_putchar('-');
 			 n = -((unsigned int)num);
 		}
-		else
-			n = num;
 		for (i = 10e8; i >= 1; i /= 10)
 		{
 			if ((n / i) != 0)
