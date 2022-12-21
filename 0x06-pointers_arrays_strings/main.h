@@ -20,7 +20,7 @@ int _putchar(char c);
 char *_strcat(char *dest, char *src);
 
 /**
- *_strncat - function to concantenate two strings 
+ *_strncat - function to concantenate two strings
  * using n bytes of the second string
  *@src: pointer to string to be appended
  *@dest: pointer to string to append to
@@ -36,7 +36,18 @@ char *_strncat(char *dest, char *src, int n);
  *@dest: pointer to string to copy to
  *@n: bytes of string to be copied
  *
- *return: pointer to resultant string
+ *Return: pointer to resultant string
  */
 char *_strncpy(char *dest, char *src, int n);
+
+/**
+ *_strcmp - compares two strings like strcmp
+ *@s1: pointer to first string
+ *@s2: pointer to second string
+ *
+ *Return: integer less than 0 if s1 less than s2
+ *0 if s1 matches s2
+ *integer greater than 0 if s1 greater than s2
+ */
+int _strcmp(char *s1, char *s2);
 #endif
