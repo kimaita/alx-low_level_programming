@@ -1,6 +1,5 @@
 #include "main.h"
 #include "2-strlen.c"
-#include <stdio.h>
 
 /**
  *_atoi - converts a string to an integer
@@ -10,12 +9,11 @@
  */
 int _atoi(char *s)
 {
-	int i, l, n, num;
+	int i, l, num;
 	char sign = '+';
-	char ints[11] = "";
 
 	l = _strlen(s);
-	n = 1;
+	num = 0;
 
 	for (i = 0; i < l; i++)
 	{
@@ -28,16 +26,14 @@ int _atoi(char *s)
 		}
 		else if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
-			ints[n] = *(s + i);
-			n++;
+			if (num == 0)
+				num = *(s + i) - '0';
+			else
+				num = ((num * 10) + *(s + i)) - '0';
 		}
-		else if ((n != 1))
-		{
-			ints[n] = '\0';
+		else if ((num != 0))
 			break;
-		}
 	}
-	ints[0] = sign;
-	sscanf(ints, "%d", &num);
+	num = (sign == '-') ? -num : num;
 	return (num);
 }
