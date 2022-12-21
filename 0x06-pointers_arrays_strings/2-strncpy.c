@@ -7,7 +7,7 @@
  *@src: pointer to string to copy
  *@n: number of bytes to copy
  *
- *return: pointer to resultant string
+ *Return: pointer to resultant string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
