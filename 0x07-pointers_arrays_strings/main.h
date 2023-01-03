@@ -52,10 +52,36 @@ unsigned int _strspn(char *s, char *accept);
 /**
  * _strpbrk - function that searches a string for any of a set of bytes
  * @s: pointer to string to search through
- * @accept - pointer to string containing bytes to search for
+ * @accept: pointer to string containing bytes to search for
  *
  * Return: pointer to the byte in s that matches one of the bytes in accept
  *  NULL if no such byte is found
  */
 char *_strpbrk(char *s, char *accept);
+
+/**
+ *_strstr - fumction that locates a substring
+ *@haystack: string to search through
+ *@needle: substring to find
+ *
+ *Return: pointer to the beginning of the located substring
+ * NULL if the substring is not found
+ */
+char *_strstr(char *haystack, char *needle);
+
+/**
+ * print_chessboard - function that prints the chessboard
+ * @a: pointer to board
+ *
+ */
+void print_chessboard(char (*a)[8]);
+
+/**
+ * print_diagsum - function that prints the sum of the two diagonals of a
+ *  square matrix of integers
+ * @a: pointer to matrix
+ * @size: array dimensions
+ *
+ */
+void print_diagsums(int *a, int size);
 #endif
