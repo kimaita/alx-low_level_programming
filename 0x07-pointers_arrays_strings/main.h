@@ -42,10 +42,20 @@ char *_strchr(char *s, char c);
 
 /**
  * _strspn - function that gets the length of a prefix substring
- * @s: pointer to string
+ * @s: pointer to string to search through
  * @accept: pointer to characters to match
  *
  * Return: number of initial bytes in s also in accept
  */
 unsigned int _strspn(char *s, char *accept);
+
+/**
+ * _strpbrk - function that searches a string for any of a set of bytes
+ * @s: pointer to string to search through
+ * @accept - pointer to string containing bytes to search for
+ *
+ * Return: pointer to the byte in s that matches one of the bytes in accept
+ *  NULL if no such byte is found
+ */
+char *_strpbrk(char *s, char *accept);
 #endif
