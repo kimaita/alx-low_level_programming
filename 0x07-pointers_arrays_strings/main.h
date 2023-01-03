@@ -36,8 +36,16 @@ char *_memcpy(char *dest, char *src, unsigned int n);
  * @c: the character to search for
  *
  *Return:
- * pointer to the first occurence of c in s if present
- * NULL if c is not  found
+ * pointer to the first occurence of c in s if present, NULL if c is not found
  */
 char *_strchr(char *s, char c);
+
+/**
+ * _strspn - function that gets the length of a prefix substring
+ * @s: pointer to string
+ * @accept: pointer to characters to match
+ *
+ * Return: number of initial bytes in s also in accept
+ */
+unsigned int _strspn(char *s, char *accept);
 #endif
