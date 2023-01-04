@@ -41,7 +41,7 @@ char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
 
 /**
- *_strcmp - compares two strings like strcmp
+ *_strcmp - function to compare two strings like strcmp
  *@s1: pointer to first string
  *@s2: pointer to second string
  *
@@ -50,4 +50,60 @@ char *_strncpy(char *dest, char *src, int n);
  *integer greater than 0 if s1 greater than s2
  */
 int _strcmp(char *s1, char *s2);
+
+/**
+ *reverse_array - function to reverse the content of an integer array
+ *@a: pointer to array
+ *@n: number of array elements
+ *
+ */
+void reverse_array(int *a, int n);
+
+/**
+ *string_toupper - function that changes all lowercase letters
+ * of a string to uppercase
+ *@c: pointer to the string
+ *
+ *Return: pointer to the capitalised string
+ */
+char *string_toupper(char *c);
+
+/**
+ *cap_string - function that capitalizes all words of a string
+ *@c: pointer to the string
+ *Description: Separators of words: space, tabulation, new line,
+ *, ; . ! ? " ( ) { and }
+ *
+ *Return: pointer to the word capitalised string
+ */
+char *cap_string(char *c);
+
+/**
+ *leet - function that encodes a string into 1337
+ *@c: pointer to the string
+ *Description:
+ * Letters a and A should be replaced by 4
+ * Letters e and E should be replaced by 3
+ * Letters o and O should be replaced by 0
+ * Letters t and T should be replaced by 7
+ * Letters l and L should be replaced by 1
+ *
+ *Return: pointer to the encoded string
+ */
+char *leet(char *c);
+
+/**
+ *print_number - function that prints an integer
+ *@n: integer to print
+ *
+ */
+void print_number(int n);
+
+/**
+ *print_buffer - function that prints a buffer
+ *@b: pointer to the buffer
+ *@size: bytes of buffer to print
+ *
+ */
+void print_buffer(char *b, int size);
 #endif
