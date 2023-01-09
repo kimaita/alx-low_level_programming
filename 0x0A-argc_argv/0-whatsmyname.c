@@ -9,7 +9,7 @@
  */
 int main(__attribute__((unused)) int argc, char *argv[])
 {
-	/*(void) argc; - substitutable for ___attribute___((unused))*/
+	/*(void) argc; - substitutable for __attribute__((unused))*/
 	printf("%s\n", argv[0]);
 	return (0);
 }
