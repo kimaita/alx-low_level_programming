@@ -60,6 +60,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	change = atoi(argv[1]);
+	if (change < 0)
+	{
+		printf("%d\n", 0);
+		return (1);
+	}
 	coins += get_coins(change);
 	printf("%d\n", coins);
 	return (0);
