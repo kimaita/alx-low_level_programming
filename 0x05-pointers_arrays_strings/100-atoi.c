@@ -14,7 +14,7 @@ int _atoi(char *s)
 
 	num = i = 0;
 
-	while (s)
+	for (i = 0; *(s + i); i++)
 	{
 		if (*(s + i) == '-')
 		{
