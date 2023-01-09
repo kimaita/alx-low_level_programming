@@ -8,11 +8,11 @@
  */
 int _atoi(char *s)
 {
-	int i, l;
+	int i;
 	unsigned int num;
 	char sign = '+';
 
-	num = 0;
+	num = i = 0;
 
 	while (s)
 	{
@@ -32,6 +32,7 @@ int _atoi(char *s)
 		}
 		else if ((num != 0))
 			break;
+		i++;
 	}
 	num = (sign == '-') ? -num : num;
 	return (num);
