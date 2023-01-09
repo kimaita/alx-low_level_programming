@@ -21,11 +21,11 @@ int main(int argc, char *argv[])
 	change = atoi(argv[1]);
 	while (change)
 	{
-		if ((change / 1) > 1)
+		if ((change / 1) >= 1)
 		{
-			if ((change / 2) > 1)
+			if ((change / 2) >= 1)
 			{
-				if ((change / 5) > 1)
+				if ((change / 5) >= 1)
 				{
 					if ((change / 10) >= 1)
 					{
