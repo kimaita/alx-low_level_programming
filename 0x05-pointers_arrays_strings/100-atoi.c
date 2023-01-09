@@ -32,7 +32,6 @@ int _atoi(char *s)
 		}
 		else if ((num != 0))
 			break;
-		i++;
 	}
 	num = (sign == '-') ? -num : num;
 	return (num);
