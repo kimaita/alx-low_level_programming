@@ -27,7 +27,7 @@ int _isalpha(int c);
 
 /**
  *_abs - computes the absolute value of an integer
- *@int: integer to get absolute value
+ *@n: integer to get absolute value
  *
  *Return: the absolute value of n
  */
@@ -59,7 +59,7 @@ int _strlen(char *s);
 
 /**
  *_puts - prints a string then a new line to stdout
- *@str: pointer to the string
+ *@s: pointer to the string
  *
  */
 void _puts(char *s);
@@ -176,8 +176,8 @@ char *_strpbrk(char *s, char *accept);
  *@haystack: string to search through
  *@needle: substring to find
  *
- *Return: pointer to the beginning of the located substring
-         * NULL if the substring is not found
+ *Return: pointer to the beginning of the located substringi
+ * NULL if the substring is not found
  */
 char *_strstr(char *haystack, char *needle);
 
