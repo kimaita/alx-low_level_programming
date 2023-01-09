@@ -12,7 +12,6 @@ int _atoi(char *s)
 	unsigned int num;
 	char sign = '+';
 
-	l = _strlen(s);
 	num = 0;
 
 	while (s)
