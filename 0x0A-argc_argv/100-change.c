@@ -12,8 +12,6 @@ int get_coins(int change)
 {
 	int coins = 0;
 
-	/*while (change)
-	{*/
 	if ((change / 1) >= 1)
 	{
 		if ((change / 2) >= 1)
@@ -39,7 +37,6 @@ int get_coins(int change)
 		coins += change / 1;
 		change %= 1;
 	}
-	/*}*/
 	return (coins);
 }
 /**
