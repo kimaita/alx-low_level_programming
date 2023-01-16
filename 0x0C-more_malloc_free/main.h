@@ -1,5 +1,5 @@
-#ifndef
-#define
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
  * malloc_checked - function that allocates memory using malloc
