@@ -19,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	bytes = strlen(s1) + strlen(s2);
+	bytes = strlen(s1) + n;
 	concat = malloc(bytes + 1);
 
 	if (concat == NULL)
