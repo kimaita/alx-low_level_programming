@@ -15,6 +15,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int bytes, i, j;
 	char *concat;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	bytes = strlen(s1) + strlen(s2);
 	concat = malloc(bytes + 1);
 
