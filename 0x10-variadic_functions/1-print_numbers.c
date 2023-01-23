@@ -18,9 +18,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		printf("%i", va_arg(ints, int));
-		if (i <= (n - 2))
-			if (separator != NULL)
-				printf("%s", separator);
+		if ((n > 1 && i <= (n - 2)) && (separator != NULL))
+			printf("%s", separator);
 	}
 	va_end(ints);
 	putchar('\n');
