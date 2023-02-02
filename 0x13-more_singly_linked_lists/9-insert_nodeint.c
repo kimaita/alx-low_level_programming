@@ -13,9 +13,13 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new;
-	listint_t *temp = *head;
+	listint_t *temp;
 	unsigned int i = 0;
 
+	if (head == NULL)
+		return (NULL);
+	temp = *head;
+	
 	if (idx >= listint_len(*head))
 		return (NULL);
 
