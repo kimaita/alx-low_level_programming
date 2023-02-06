@@ -20,31 +20,9 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0; i <= len; i++)
 	{
 		if (*(b + i) == '0' || *(b + i) == '1')
-			dec += ((*(b + (len - i)) - 48) * (raise(2, i)));
+			dec += ((*(b + (len - i)) - 48) << i);
 		else
 			return (0);
 	}
 	return (dec);
-}
-
-/**
- * raise - raises a base to a power
- * @base: base value
- * @exp: exponent value
- *
- * Return: base raised to the power exp
- */
-unsigned int raise(int base, unsigned int exp)
-{
-	unsigned int i, result;
-
-	result = 1;
-
-	if (exp == 0)
-		return (result);
-
-	for (i = 1; i <= exp; i++)
-		result *= base;
-
-	return (result);
 }

@@ -54,12 +54,4 @@ int clear_bit(unsigned long int *n, unsigned int index);
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
-/**
- * raise - function that raises a base to a power
- * @base: base value
- * @exp: exponent value
- *
- * Return: base raised to the power exp
- */
-unsigned int raise(int base, unsigned int exp);
 #endif /* #ifndef _MAIN_H_ */
