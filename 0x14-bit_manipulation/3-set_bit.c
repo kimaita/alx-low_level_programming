@@ -10,8 +10,8 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (n == NULL || index > count_bits(*n) - 1)
+	if (n == NULL || index > 31)
 		return (-1);
-	*n = *n | (1 << index);
+	*n |= (1 << index);
 	return (1);
 }
