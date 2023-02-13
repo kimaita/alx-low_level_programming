@@ -1,7 +1,6 @@
 #include "main.h"
 #include <fcntl.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * read_textfile - function that reads a text file and prints it to the POSIX
@@ -35,8 +34,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read_letters = read(fd, buf, letters);
 	if (read_letters < 0)
 		return (0);
-
-	write_letters = write(1, buf, read_letters);
+	close(fd);
+	write_letters = write(STDOUT_FILENO, buf, read_letters);
 	if (write_letters != read_letters)
 		return (0);
 
