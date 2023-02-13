@@ -1,6 +1,7 @@
 #include "main.h"
 #include <fcntl.h>
-
+#include <stdio.h>
+#include <string.h>
 /**
  * create_file - function that creates a file
  * @filename: pointer to name of file to create
@@ -24,8 +25,15 @@ int create_file(const char *filename, char *text_content)
 	if (fd < 0)
 		return (fd);
 
-	write_count = write(fd, text_content, sizeof(text_content));
+	if (text_content == NULL)
+	{
+		close(fd);
+		return (0);
+	}
+
+	write_count = write(fd, text_content, strlen(text_content));
 	if (write_count < 0)
 		return (write_count);
+	close(fd);
 	return (1);
 }
