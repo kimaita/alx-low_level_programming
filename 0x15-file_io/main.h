@@ -28,4 +28,14 @@ ssize_t read_textfile(const char *filename, size_t letters);
  *	  -1(FAILURE): NULL filename, failed write/creation
  */
 int create_file(const char *filename, char *text_content);
+
+/**
+ * append_text_to_file - function that appends text at the end of a file
+ * @filename: pointer to name of the file
+ * @text_content: pointer to string to add at the end of the file
+ *
+ * Return: 1(SUCCESS)
+ *	  -1(FAILURE): NULL filename, non-existent file, no write permission
+ */
+int append_text_to_file(const char *filename, char *text_content);
 #endif /* #ifndef _MAIN_H_ */
