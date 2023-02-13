@@ -1,6 +1,5 @@
 #include "main.h"
 #include <fcntl.h>
-#include <stdio.h>
 #include <string.h>
 /**
  * create_file - function that creates a file
