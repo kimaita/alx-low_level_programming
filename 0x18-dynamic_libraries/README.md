@@ -64,3 +64,6 @@ nm -D libdynamic.so
 |Object code embedded in executable|Link to library stored in environment variable|
 
 [1-create_dynamic_lib.sh](./1-create_dynamic_lib.sh) is a script that creates a dynamic library called `liball.so` from all the `.c` files that are in the current directory.
+
+[100-operations.so](./100-operations.so) is a dynamic library contaning [C-functions](./100-math.c) for addition, subtraction, multiplication, division and modulus called from Python in [100-tests.py](./100-tests.py)  
+_Division by zero is not accounted for due to conflicting function names(div in stdlib.h)_
