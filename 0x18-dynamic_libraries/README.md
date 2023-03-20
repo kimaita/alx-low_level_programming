@@ -50,6 +50,7 @@ ldd libdynamic.so
 ```
 
 To **view the functions** included in a library, use `nm` like:
+
 ```bash
 nm -D libdynamic.so 
 ```
@@ -61,3 +62,5 @@ nm -D libdynamic.so
 |`.a`(archive)|`.so`(shared object)|
 |Compile-time linking|Run-time loading|
 |Object code embedded in executable|Link to library stored in environment variable|
+
+[1-create_dynamic_lib.sh](./1-create_dynamic_lib.sh) is a script that creates a dynamic library called `liball.so` from all the `.c` files that are in the current directory.
