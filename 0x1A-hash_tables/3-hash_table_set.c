@@ -18,8 +18,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx;
 	hash_node_t *node;
 
-	/* check if empty key*/
-	if (key == NULL || key[0] == '\0')
+	/* check if invalid key or table*/
+	if (!ht || key == NULL || key[0] == '\0')
 		return (0);
 	idx = key_index((unsigned char *)key, ht->size);
 
