@@ -16,8 +16,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	idx = key_index((unsigned char *)key, ht->size);
 
-	/* NULL hash table check*/
-	if (!ht)
+	/* invalid hash table or key check*/
+	if (!ht || key == NULL || key[0] == '\0')
 		return (NULL);
 
 	tmp = ht->array[idx];
