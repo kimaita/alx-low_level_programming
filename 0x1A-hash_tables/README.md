@@ -11,7 +11,42 @@
 ## Implementation
 
 * [hash_tables](./hash_tables.h) defines the structure of our hash table and it's nodes.  
-The hash table, `hash_table_s`, consists of an integer `size` defining its size and an array of pointers to nodes `array`.  
-The nodes, `hash_node_s`, consist of a `key`(character array), `value`(character array) and pointer `next` pointing to the next node.
+  * The hash table, `hash_table_s`, consists of an integer `size` defining its size and an array of pointers to nodes `array`.  
+  * The nodes, `hash_node_s`, consist of a `key`(character array), `value`(character array) and pointer `next` pointing to the next node.
 * [hash_table_create](./0-hash_table_create.c) creates a hashtable of given size
 * [djb2](./1-djb2.c) is the provided hashing algorithm. [Source](https://gist.github.com/papamuziko/7bb52dfbb859fdffc4bd0f95b76f71e8)
+* [key_index](./2-key_index.c) generates an index given a key.
+* [hash_table_set](./3-hash_table_set.c) adds an element to the hash table, with collisions added to the beginning of the linked list.
+* [hash_table_get](./4-hash_table_get.c) gets a value from the hash table given the key
+* [hash_table_print](./5-hash_table_print.c) prints a hash table ordered by array occurence then list occurence.  
+  **Example:**
+
+  ```c
+  hash_table_t *ht;
+
+  ht = hash_table_create(1024);
+  hash_table_print(ht);
+  hash_table_set(ht, "c", "fun");
+  hash_table_set(ht, "python", "awesome");
+  hash_table_set(ht, "Bob", "and Kris love asm");
+  hash_table_set(ht, "N", "queens");
+  hash_table_set(ht, "Asterix", "Obelix");
+  hash_table_set(ht, "Betty", "Cool");
+  hash_table_set(ht, "98", "Battery Street");
+  hash_table_set(ht, "synaphea", "Bloop");
+  hash_table_set(ht, "joyful", "Bleep");
+  hash_table_set(ht, "dram", "first");
+  hash_table_set(ht, "vivency", "second");
+  hash_table_set(ht, "neurospora", "Weird name");
+  hash_table_set(ht, "heliotropes", "Cliche");
+  hash_table_print(ht);
+  ```
+
+  **Output:**
+
+  ```bash
+  {}
+  {'Betty': 'Cool', 'python': 'awesome', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Bob': 'and Kris love asm', 'Asterix': 'Obelix', 'joyful': 'Bleep', 'synaphea': 'Bloop', 'heliotropes': 'Cliche', 'neurospora': 'Weird name', 'vivency': 'second', 'dram': 'first'}
+  ```
+  
+* [hash_table_delete](./6-hash_table_delete.c) deletes a hash table
