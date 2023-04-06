@@ -14,3 +14,4 @@
 The hash table, `hash_table_s`, consists of an integer `size` defining its size and an array of pointers to nodes `array`.  
 The nodes, `hash_node_s`, consist of a `key`(character array), `value`(character array) and pointer `next` pointing to the next node.
 * [hash_table_create](./0-hash_table_create.c) creates a hashtable of given size
+* [djb2](./1-djb2.c) is the provided hashing algorithm. [Source](https://gist.github.com/papamuziko/7bb52dfbb859fdffc4bd0f95b76f71e8)
