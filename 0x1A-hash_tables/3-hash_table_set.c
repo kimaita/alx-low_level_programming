@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node;
 
 	/* check if empty key*/
-	if (key[0] == '\0')
+	if (key == NULL || key[0] == '\0')
 		return (0);
 	idx = key_index((unsigned char *)key, ht->size);
 
