@@ -96,8 +96,7 @@ void sorted_list_set(shash_table_t *ht, shash_node_t *node)
 
 	if (ht->shead == NULL)
 	{
-		ht->shead = node;
-		ht->stail = node;
+		ht->shead = ht->stail = node;
 		return;
 	}
 	if (strcmp(ht->shead->key, node->key) > 0)
