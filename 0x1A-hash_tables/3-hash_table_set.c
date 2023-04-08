@@ -41,6 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		/* same key, update node*/
 		if (!strcmp(key, ht->array[idx]->key))
 		{
+			node->next = ht->array[idx]->next;
 			free(ht->array[idx]->value);
 			free(ht->array[idx]);
 			ht->array[idx] = node;
