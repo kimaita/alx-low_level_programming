@@ -94,40 +94,37 @@ void sorted_list_set(shash_table_t *ht, shash_node_t *node)
 {
 	shash_node_t *tmp;
 
-	/* sorted linked list */
-	if (ht->shead == NULL && ht->stail == NULL)
+	if (ht->shead == NULL)
 	{
 		ht->shead = node;
 		ht->stail = node;
+		return;
 	}
-	else if (ht->shead->key > node->key)
+	if (strcmp(ht->shead->key, node->key) > 0)
 	{
-		node->snext = ht->shead->snext;
+		node->snext = ht->shead;
 		node->snext->sprev = node;
 		ht->shead = node;
+		return;
 	}
-	else
+
+	tmp = ht->shead;
+	while (tmp->snext)
 	{
-		tmp = ht->shead;
-		while (tmp)
+		if (strcmp(tmp->key, node->key) > 0)
 		{
-			if (tmp->key < node->key)
-			{
-				node->snext = tmp;
-				node->sprev = tmp->sprev;
-				tmp->sprev = node;
-				break;
-			}
-			tmp = tmp->snext;
+			node->snext = tmp;
+			node->sprev = tmp->sprev;
+			tmp->sprev->snext = node;
+			tmp->sprev = node;
+			return;
 		}
-		if (tmp->key >= node->key)
-		{
-			node->snext = NULL;
-			node->sprev = tmp;
-			tmp->snext = node;
-			ht->stail = node;
-		}
+		tmp = tmp->snext;
 	}
+	node->snext = NULL;
+	node->sprev = tmp;
+	tmp->snext = node;
+	ht->stail = node;
 }
 
 /**
@@ -174,11 +171,12 @@ void shash_table_print(const shash_table_t *ht)
 	printf("{");
 
 	tmp = ht->shead;
-	while (tmp)
+	while (tmp->snext)
 	{
-		printf("'%s': '%s'", tmp->key, tmp->value);
+		printf("'%s': '%s', ", tmp->key, tmp->value);
 		tmp = tmp->snext;
 	}
+	printf("'%s': '%s'", tmp->key, tmp->value);
 
 	printf("}\n");
 }
@@ -198,12 +196,12 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("{");
 
 	tmp = ht->stail;
-	while (tmp)
+	while (tmp->sprev)
 	{
 		printf("'%s': '%s', ", tmp->key, tmp->value);
 		tmp = tmp->sprev;
 	}
-
+	printf("'%s': '%s'", tmp->key, tmp->value);
 	printf("}\n");
 }
 
