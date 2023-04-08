@@ -121,6 +121,14 @@ void sorted_list_set(shash_table_t *ht, shash_node_t *node)
 		}
 		tmp = tmp->snext;
 	}
+	if (strcmp(tmp->key, node->key) > 0)
+	{
+		node->snext = tmp;
+		node->sprev = tmp->sprev;
+		tmp->sprev->snext = node;
+		tmp->sprev = node;
+		return;
+	}
 	node->snext = NULL;
 	node->sprev = tmp;
 	tmp->snext = node;
