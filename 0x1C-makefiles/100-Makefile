@@ -1,0 +1,31 @@
+.PHONY: all school clean oclean fclean re
+
+#Compiler and its flags
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#source files, object files, executable
+SRC = main.c school.c 
+OBJ = ${SRC:.c=.o}
+NAME = school
+
+#entry point - calls executable build
+all:${NAME}
+
+#builds the executable - leverages implicit rules for object files
+${NAME}: ${OBJ} m.h
+	${CC} ${OBJ} -o ${NAME}
+
+#removes temp vim/emac files and the executable
+clean:
+	${RM} -f *~ ${NAME}
+
+#removes object files
+oclean:
+	${RM} -f ${OBJ}
+
+#removes object files, executable and temp vim/emac files
+fclean:	clean oclean
+
+#removes object files and rebuilds the executable
+re: oclean ${NAME}
