@@ -13,8 +13,11 @@ NAME = school
 all:${NAME}
 
 #builds the executable - leverages implicit rules for object files
-${NAME}: ${OBJ} m.h
+${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
+
+#require m.h header for compiling main
+main.o: m.h
 
 #removes temp vim/emac files and the executable
 clean:
