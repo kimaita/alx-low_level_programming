@@ -2,7 +2,7 @@
 """Functions to get the perimeter of an island"""
 
 
-def get_row_length(tiles:int):
+def get_row_length(tiles: int):
     """Returns the length the tiles in a row.
 
     Since the tiles are horizontally linked, the number of sides reduces by two
@@ -19,7 +19,7 @@ def get_row_length(tiles:int):
     return 0
 
 
-def island_perimeter(grid)->int:
+def island_perimeter(grid) -> int:
     """Returns the perimeter of an island
 
     Args:
