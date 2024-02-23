@@ -18,11 +18,11 @@ ${NAME}: ${OBJ} m.h
 
 #removes temp vim/emac files and the executable
 clean:
-	${RM} -f *~ ${NAME}
+	${RM} *~ ${NAME}
 
 #removes object files
 oclean:
-	${RM} -f ${OBJ}
+	${RM} ${OBJ}
 
 #removes object files, executable and temp vim/emac files
 fclean:	clean oclean
