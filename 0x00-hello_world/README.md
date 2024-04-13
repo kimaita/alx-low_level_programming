@@ -1,1 +1,4 @@
- Intro to C: writing, compiling
+# Intro to C
+
+- Compiling C code
+- Printing to stdout
