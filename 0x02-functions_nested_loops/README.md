@@ -1,3 +1,1 @@
-C stuff
-
-Functions & nested loops
+# Functions & nested loops

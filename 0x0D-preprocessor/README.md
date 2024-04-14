@@ -1,2 +1,4 @@
-C preprocessor directives
-#define / #include
+# C preprocessor directives
+
+- `#define` - constants, macros
+- `#include` - libraries
