@@ -56,7 +56,7 @@ int binary_search(int *array, size_t size, int value)
 			idxL = idxM + 1;
 	}
 	print_array(array, idxL, idxR);
-	
+
 	if (array[idxL] == value)
 		return (idxL);
 
